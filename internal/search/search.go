@@ -39,6 +39,6 @@ func (s search) SearchMultipleKeysFromStringDataset(keys []string, dataset []str
 }
 
 type ResultFromStringDataset struct {
-	Key       string
-	Positions []int // start with 0
+	Key       string `json:"key"`
+	Positions []int  `json:"positions"` // start with 0
 }

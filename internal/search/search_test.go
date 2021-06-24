@@ -7,6 +7,8 @@ import (
 )
 
 func TestSearchMultipleKeysFromStringDataset(t *testing.T) {
+	t.Parallel()
+
 	testCases := []struct {
 		name          string
 		keys          []string
@@ -136,7 +138,6 @@ func TestSearchMultipleKeysFromStringDataset(t *testing.T) {
 		},
 	}
 
-	t.Parallel()
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			s := New()
